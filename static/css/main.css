@@ -49,6 +49,7 @@ body, html {
 	border-width: 150px 150px 0 150px;
 	border-color: #FEFEFA transparent transparent transparent;
 	margin: auto;
+	margin-top: 50px;
 }
 
 .email-input {
@@ -73,7 +74,7 @@ body, html {
 	margin: auto;
 	height: 60px;
 	padding: 0px;
-	margin-top: 100px;
+	margin-top: 65px;
 	z-index: 2;	
 }
 
@@ -83,8 +84,5 @@ body, html {
 	text-align: center;
 
 	position: relative;
-	top: -55px;
-	
-	z-index: 1;
-	display: none;
+	opacity: 0;
 }

@@ -30,10 +30,9 @@
           url: "/add",
           data: {email: $(".email-input").val()},
           success: function() {
-              $(".form-stuff").fadeOut(function() {
-                $("form-success").animate({
-                     display: "inline"});
-              })
+              //$(".form-stuff").animate({opacity: 0}, function() {
+                $(".form-success").animate({opacity: 1})
+              //})
             }
           });
     }
@@ -43,12 +42,13 @@
 		<h1 class='logo'>Where's A</h1>
 		<h1 class='slogan'>Localized product search done right.</h1>
 		<div class="sign-up">
+      <div class="form-success">Thanks for signing up!</div>
       <div class="form-stuff">
 			<input class="email-input" spellcheck="false" type="text" name="email" placeholder="Sign up for updates">
 			<button class="submit" onClick="addEmail()">Sign Up!</button>
 		</div>
   </div>
-  <div class="form-success">Thanks for signing up!</div>
+  
 		<div class="arrow-down"></div>
 	</div>
   	<div id='map' class='map'></div>
