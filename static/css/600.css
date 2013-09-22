@@ -1,6 +1,10 @@
 .slogan {
 	font-size: 30px;
-padding: 0px 30px;
+	padding: 0px 30px;
+}
+
+.form-success {
+	font-size: 30px;
 }
 
 .logo {

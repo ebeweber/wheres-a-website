@@ -5,6 +5,9 @@
 .slogan {
 	font-size: 40px;
 }
+.form-success {
+	font-size: 40px;
+}
 
 .sign-up {
 	width: 80%;
@@ -19,5 +22,5 @@
 }
 
 .arrow-down {
-	margin-top: 50px;
+	margin-top: 100px;
 }
