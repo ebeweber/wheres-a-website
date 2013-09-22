@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block imports %}
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6/leaflet.css" />
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.standalone.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6/leaflet.ie.css" />
+  <![endif]-->
+  <script src="http://cdn.leafletjs.com/leaflet-0.6/leaflet.js"></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.standalone.js'></script>
+
+
+  <!-- Get jQuery up and going -->
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 1450px)' href='{{ url_for('static', filename='css/1150-1450.css') }}' />
+  <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 1150px)' href='{{ url_for('static', filename='css/950-1150.css') }}' />
+  <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 950px)' href='{{ url_for('static', filename='css/950.css') }}' />
+  <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 600px)' href='{{ url_for('static', filename='css/600.css') }}' />
+{% endblock %}
+
+{% block title %}Where's A{% endblock %}
+
+{% block content %}
+  <script>
+    function addEmail() {
+      $.ajax({
+          type: "POST",
+          url: "/add",
+          data: {email: $(".email-input").val()},
+          success: function() {
+              $(".form-stuff").fadeOut(function() {
+                $("form-success").animate({
+                     display: "inline"});
+              })
+            }
+          });
+    }
+  </script>
+
+	<div class='jumbo-box'>
+		<h1 class='logo'>Where's A</h1>
+		<h1 class='slogan'>Localized product search done right.</h1>
+		<div class="sign-up">
+      <div class="form-stuff">
+			<input class="email-input" spellcheck="false" type="text" name="email" placeholder="Sign up for updates">
+			<button class="submit" onClick="addEmail()">Sign Up!</button>
+		</div>
+  </div>
+  <div class="form-success">Thanks for signing up!</div>
+		<div class="arrow-down"></div>
+	</div>
+  	<div id='map' class='map'></div>
+  	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  	<script type="text/javascript">
+  		// Create a map and set it to the user's location, sketchy
+  		var map = L.mapbox.map('map', 'mebeweber.map-ukkcqrjo', {})
+  			.setView([google.loader.ClientLocation.latitude, 
+  				google.loader.ClientLocation.longitude], 17)
+  	</script>
+{% endblock %}

@@ -1,0 +1,90 @@
+body, html {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.map {
+	height: 100%;
+}
+
+.jumbo-box {
+	position: absolute;
+	z-index: 1;
+	width: 70%;
+	margin: 5% 15%;
+	height: 550px;
+
+	background-color: #FEFEFA;
+	opacity: .7;
+}
+
+.logo {
+	text-align: center;
+	font: 150px/60px 
+	'HelveticaNeue-UltraLight', 
+	'Helvetica Neue UltraLight', 
+	Arial, sans-serif;
+	opacity: 1;
+}
+
+.slogan {
+	text-align: center;
+	font: 50px/60px 
+	'HelveticaNeue-UltraLight', 
+	'Helvetica Neue UltraLight', 
+	Arial, sans-serif;
+	opacity: 1;
+}
+
+.arrow-down {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 150px 150px 0 150px;
+	border-color: #FEFEFA transparent transparent transparent;
+	margin: auto;
+}
+
+.email-input {
+	text-align: center;
+	border: 1px solid #d3d3d3;
+	font: 40px/60px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+	padding-left: 0px;
+	width: 74%;
+	height: 100%;
+}
+
+.submit {
+	font: 40px/60px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+	height: 111%;
+	width: 25%;
+	margin-left: -7px;
+	background-color: #9fddff;
+}
+
+.sign-up {
+	width: 60%;
+	margin: auto;
+	height: 60px;
+	padding: 0px;
+	margin-top: 100px;
+	z-index: 2;	
+}
+
+.form-success {
+	font: 40px/60px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+	width: 100%;
+	text-align: center;
+
+	position: relative;
+	top: -55px;
+	
+	z-index: 1;
+	display: none;
+}
